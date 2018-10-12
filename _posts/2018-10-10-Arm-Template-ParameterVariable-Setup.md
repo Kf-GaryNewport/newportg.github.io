@@ -13,7 +13,7 @@ Every Resource should be tagged.
 There should be a clear naming convention between the parameters and variables.
 Parameters should be either primitives or unique values
 Variables should build up your resource names from the parameter primitives.
-Parameters
+## Parameters
 I prefer to inject any unique values via a VSTS/VSO or if your prefer Azure DevOps deployment process.
 
 In the first part of the file I spell out the acronyms which form part of the naming convention for the resources, you could use nested templates for this, but I feel the add unnecessary complications, as the nested template must be available via a URL.
@@ -55,7 +55,7 @@ The second part involves parameters that are specific to this application, such 
     }
 }
 ```
-Variables
+## Variables
 As you can see from the variables, I build up my resource names from the parameters.
 
 I also pull in values for the hostingplan and component identities, so they can be used easily with the resource definitions.
