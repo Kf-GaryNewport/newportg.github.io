@@ -55,20 +55,31 @@
 					<div class="primary col-md-8 col-sm-12 col-xs-12">
 						<section class="blog section">
 							<div class="section-inner">
-									<div class="content">  
+								<div class="content">  
+									{% for post in site.posts %}
+										<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 
-										{% for post in site.posts %}
-											<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-										{% endfor %}
+										<div class="post item row">
+												<div class="desc col-xs-12">
+													<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+													<h3 class="date">{{ post.date | date_to_string }}</h4>
+													<div class="main-article">
+													</div>
+													<p><a class="more-link" href="{{ post.url }}"><i class="fa fa-arrow-circle-right"></i> Continue Reading...</a></p>
+												</div><!--//desc-->                          
+											</div><!--//item-->									
+											<hr class="divider" />		
+										</div>
+									{% endfor %}
+								</div>
 
-									</div>
 							</div><!--//section-inner-->                 
 						</section><!--//section-->	
 					</div><!--//primary-->
 					<div class="secondary col-lg-4 col-12">
 							<aside class="info aside section">
 								<div class="section-inner">
-									
+									<!--
 									<form class="search-form" method="get" action="/search/">
 										<div class="input-group">
 											<input type="search" name="q" class="form-control"  placeholder="Search site..." />
@@ -77,7 +88,7 @@
 											</span>
 										</div>
 									</form>
-								
+								-->
 									<hr />
 									<h2 class="heading sr-only">Basic Information</h2>
 									<div class="content">
