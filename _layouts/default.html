@@ -51,13 +51,33 @@
 			</header><!--//header-->
 
 			<div class="container sections-wrapper">
+				<div class="row">
+					<div class="primary col-md-8 col-sm-12 col-xs-12">
+						<section class="blog section">
+							<div class="section-inner">
+									<div class="content">    
+										<div class="post item row">
+											<div class="desc col-xs-12">
+													{{ content }}
+											</div>
+										</div>
+									</div>
+							</div><!--//section-inner-->                 
+						</section><!--//section-->	
+					</div><!--//primary-->
+				</div><!--//row-->
+			</div><!--//masonry-->		
+																					
+			<div class="container sections-wrapper">
 					<div class="row">
 						<div class="primary col-lg-8 col-12">
 							<section class="blog section">
 								<div class="section-inner">
 									<h2 class="heading">Latest Blog Posts</h2>
 
-									{{ content }}
+									<div class="post">
+											{{ content }}
+										  </div>
 
 									<p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>
 									<div id="rss-feeds" class="content">
