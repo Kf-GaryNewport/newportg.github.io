@@ -46,7 +46,7 @@
 							<li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li>     -->           
 						</ul> 
 					</div><!--//profile-->
-					<a class="btn btn-cta-primary float-right" href="gary.newport@zoomalong.co.uk" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>              
+					<a class="btn btn-cta-primary float-right" href="mailto:gary.newport@zoomalong.co.uk" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>              
 				</div><!--//container-->
 			</header><!--//header-->
 
@@ -59,8 +59,8 @@
 									{% for post in site.posts %}
 										<div class="post item row">
 											<div class="desc col-xs-12">
-												<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-												<h3 class="date">{{ post.date | date_to_string }}</h3>
+												<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+												<h2 class="date">{{ post.date | date_to_string }}</h2>
 												<div class="main-article">
 												</div>
 												<p><a class="more-link" href="{{ post.url }}"><i class="fa fa-arrow-circle-right"></i> Continue Reading...</a></p>
