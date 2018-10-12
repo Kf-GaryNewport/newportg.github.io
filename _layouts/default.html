@@ -55,9 +55,20 @@
 					<div class="primary col-md-8 col-sm-12 col-xs-12">
 						<section class="blog section">
 							<div class="section-inner">
-									<div class="content">  
+									div class="content">  
 										{% for post in site.posts %}  
-											{{ content }}
+										<div class="post item row">
+
+											<div class="desc col-xs-12">
+												<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+												<h3 class="date"><span>{{ post.date | date_to_string }}</span></h4>
+												<div class="main-article">
+													{{content}}
+												</div><!--//item-->
+
+												<hr class="divider" />					
+											</div>
+										</div>
 										{% endfor %}
 									</div>
 							</div><!--//section-inner-->                 
