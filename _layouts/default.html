@@ -57,8 +57,6 @@
 							<div class="section-inner">
 								<div class="content">  
 									{% for post in site.posts %}
-										<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-
 										<div class="post item row">
 											<div class="desc col-xs-12">
 												<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
