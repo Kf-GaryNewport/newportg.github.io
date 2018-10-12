@@ -1,3 +1,7 @@
 name: Gary Newport, Developer
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+pages_list:       
+  About: '/about'
+  Blog: '/blog'
+  Feed: '/_posts/atom.xml'
