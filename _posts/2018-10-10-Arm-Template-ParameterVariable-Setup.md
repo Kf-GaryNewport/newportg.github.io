@@ -19,7 +19,7 @@ I prefer to inject any unique values via a VSTS/VSO or if your prefer Azure DevO
 In the first part of the file I spell out the acronyms which form part of the naming convention for the resources, you could use nested templates for this, but I feel the add unnecessary complications, as the nested template must be available via a URL.
 
 The second part involves parameters that are specific to this application, such as the tenant id, application name etc.
-<code>
+<pre><code>
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
@@ -53,13 +53,13 @@ The second part involves parameters that are specific to this application, such 
         }
     }
 }
-</code>
+</code></pre>
 Variables
 As you can see from the variables, I build up my resource names from the parameters.
 
 I also pull in values for the hostingplan and component identities, so they can be used easily with the resource definitions.
 
-<code>
+<pre><code>
 "variables": {
     "var_env_region": "[concat(parameters('para_target_env'), '-', parameters('para_acronym_region'))]",
     "var_public_url": "[concat(parameters('para_target_env'), '.', parameters('para_application_name'), '.', parameters('para_vanity_name'))]",
@@ -75,4 +75,4 @@ I also pull in values for the hostingplan and component identities, so they can 
     "var_webapp_hstpln": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', variables('var_hstpln_group'), '/providers/Microsoft.Web/serverfarms/', variables('var_hstpln_name'))]",
     "var_msi_azf": "[concat(resourceId('Microsoft.Web/sites', variables('var_azf_name')),'/providers/Microsoft.ManagedIdentity/Identities/default')]"
 },
-</code>
+</code></pre>
