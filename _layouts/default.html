@@ -57,12 +57,7 @@
 							<div class="section-inner">
 									<div class="content">  
 										{% for post in site.posts %}  
-										<div class="post item row">
-											<div class="desc col-xs-12">
-												{{content}}
-												<hr class="divider" />					
-											</div>
-										</div>
+											{{ content }}
 										{% endfor %}
 									</div>
 							</div><!--//section-inner-->                 
